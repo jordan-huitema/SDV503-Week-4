@@ -205,3 +205,20 @@ switch (dob){
     console.log("You'r to old or young")
   break
 };
+
+//------Ternary Operator------
+//js allows us to set arrays in varables, this effectivly puts variables inside other variables
+person = {                                                    //setting the person var as an array
+  name: 'tony',                                                 //adding name var to the array and setting as 'tony'
+  age: 20,                                                      //adding age var to the array and setting as 20
+  driver: null                                                  //adding driver var and setting as empty 
+};
+if (person.age >= 16) {                                       //this if statement checks the age var inside the person array and if it is above 15 it will run
+  person.driver = 'Yes';                                        //this sets the driver var inside the perosn array as Yes
+} else {                                                      //if the prior stement didnt run then
+  person.driver = 'No';                                         //set driver var in the person array to No
+};
+
+person.driver = person.age >=16 ? 'Yes' : 'No';               //this line does the same thing as the if statements but in shorthand
+//"person.age >=16" if the age var in the person array is greater than 15, "? 'Yes' : 'No'" if true set Yes if false set No
+
