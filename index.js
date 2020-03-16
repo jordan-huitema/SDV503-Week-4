@@ -110,31 +110,34 @@ let str = '';
   };
 
   //--------------Switch statments-----------
-//
+//A switch statement is a container for case statements 
+//Case statements are effetily else if statements but they can be chained if the switch container is not broken (by break;)
+//Switch's with containers are a much shorter a and cleaner way of executing if and else if statments and also have extra functinallity
 
 let person = 'Joe';
 
-switch (person) {
-  case 'Jane':
-    console.log('Hi Jane');
-    break;
-  case 'John':
-    console.log('Hi John');
-    break;
-  case 'Joe':
-    console.log('Hi Joe');
-    break;
-  case 'Mary':
-    console.log('Hi Mary');
-    break;
-  default:
-    console.log('Hi');
-    break;
+switch (person) {                           //start switch and use the var (person)
+  case 'Jane':                              //if var (person) = jane
+    console.log('Hi Jane');                   //print
+    break;                                    //end switch
+  case 'John':                              //if var (person) = john
+    console.log('Hi John');                   //print
+    break;                                    //end switch
+  case 'Joe':                               //if var (person) = Joe
+    console.log('Hi Joe');                    //print
+    break;                                    //end switch
+  case 'Mary':                              //if var (person) = Mary
+    console.log('Hi Mary');                   //print
+    break;                                    //end switch
+  default:                                  //else if 
+    console.log('Hi');                        //print
+    break;                                    //end switch
 };
 
 //Putting Default Between Cases
+//It dosnt matter where the default output is set it will still output default if other cases are not true or dont end the switch
 
-person = 'Joe';
+person = '';                                //setting the person var to null
 switch (person) {
   case 'Jane':
     console.log('Hi Jane');
@@ -142,7 +145,7 @@ switch (person) {
   case 'John':
     console.log('Hi John');
     break;
-  default:
+  default:                                  //sets the default output of the switch to "hi" if other cases are not executed or switch is not broken (with break;)
     console.log('Hi');
     break;
   case 'Joe':
@@ -154,19 +157,51 @@ switch (person) {
 };
 
 //Multi-Criteria Case
-
+//If a case dosnt contain a break to stop the switch, the switch will continue and chain the outputs until it reaches the end of the switch array ( }; )  of the switch
 let foo = 1;
 switch (foo) {
+  case 2:                                   //this case is not printed because the var (foo) does not equal 2
+    console.log("this aint it")
   case 1:
-  case 2:
+    console.log("just keep truckin");       //because this case dosnt have a break the switch will continue to print preceding case's until it finds one
   case 3:
-  case 4:
-    console.log('I like this number');
-    break;
+  case 4:                                   //this case is enabled reguardless of its argument because it procedes a case without a break 
+    console.log('I like this number');      //this log will be printed after the prior one (on a new console line) because it is a diffrent output
+    break;                                  //the switch has found its break and will now end
   case -1:
   case -2:
     console.log('I love this number');
     break;
   default:
     console.log('I don\'t like this number.');
+};
+
+//--------------------Block-Scope Variable in Switch Statements------------
+//much like if statements you can set new vars within the scope of the switch
+let dob = 1998;
+
+switch (dob){
+  case 1997:{
+    let age = 2020 - dob;                     
+    console.log("your age is " + age);
+    break;
+  };
+  case 1998:{
+    let age = 2020 - dob;                     //setting a age var within the scope of the case (this cannot be used above/outside the case statement)
+    console.log("your age is " + age);        //using the local age var to print the users age
+    break;
+  };
+  case 1999:{
+    let age = 2020 - dob;
+    console.log("your age is " + age);
+    break;
+  };
+  case 2000:{
+    let age = 2020 - dob;
+    console.log("your age is " + age);
+    break;
+  };
+  default:
+    console.log("You'r to old or young")
+  break
 };
