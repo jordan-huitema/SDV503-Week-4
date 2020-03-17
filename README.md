@@ -28,6 +28,7 @@ If/Else Statements
 -Comparison operators
 
 >Comparison operators are exactly what they sound like, they compare two values and give a "True" or "False" result. These can be used in an argument (). These are the types of comparison operators
+
 "   >   Greater than        (Value 1 must be greater than value 2)
 "   <   Less Than           (Value 1 must be less than value 2)
 "   ==  Equal               (Must be equal values)
@@ -46,6 +47,7 @@ Truthy and Falsy
 -Switch Statements 
 
 >A switch statement is a container that houses case statement's, these case statements function in much the same way as an if statement but are easier to be chained and are written diffrently. Switches are useful because you can make a block that has 1 or more outputs. A switch will run cases in a decending order and only stop when it encounters a "break" command or the containers end ( }; ).
+
 e.g.
 Switch (var) {
     case 1:
@@ -58,7 +60,9 @@ Switch (var) {
         console.log("bud");
         break;               <--To here even tho the arguments of the proceding case's are not true
 };                              This switch would output "hey " "there " "bud" 
+
 >If a switches case statement's are not met it will end without an output, you can change this by adding "default" before after or inbetween the case's so the program will still have an output if no case conditions are met
+
 e.g.
 Switch (var) {
     case 1:
@@ -87,18 +91,18 @@ array.x = array.x = array.y ? 10 : 5        //this would be the same with arrays
 
 Challenges
 
-This week my only challenge was with the Lab-Three assesment, I wanted to create my program but using switch statments inside if statements but unfortunatly I couldnt get the switch statments to work. After some googling I came to the conclusion that you couldnt put an argument in a case statment and had to change my program acordingly, later i realized the only reason my switches didnt work was because i forgot you needed the ":" character after the case argument. Unfortunatly it was to late to go back and change everything so i left it as it was. 
+>This week my only challenge was with the Lab-Three assesment, I wanted to create my program but using switch statments inside if statements but unfortunatly I couldnt get the switch statments to work. After some googling I came to the conclusion that you couldnt put an argument in a case statment and had to change my program acordingly, later i realized the only reason my switches didnt work was because i forgot you needed the ":" character after the case argument. Unfortunatly it was to late to go back and change everything so i left it as it was. 
 
-I think an example of case's with arguments in them on the gitbook resources could have helped with this because i didnt end up practicing it or have any relevant refrance to figure out what my problem was. I think it would have helped me spot my mistake earlier.
+>I think an example of case's with arguments in them on the gitbook resources could have helped with this because i didnt end up practicing it or have any relevant refrance to figure out what my problem was. I think it would have helped me spot my mistake earlier.
 
->My code
+My code
 
 case (var >= 85 && var <= 100) {
     console.log("words and such");
     break
 }
 
->Correct code                 || forgot you needed that
+Correct code                  || forgot you needed that
                               \/
 case (var >= 85 && var <= 100): {
     console.log("words and such");
