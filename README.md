@@ -7,6 +7,12 @@ https://github.com/jordan-huitema/Lab-Three
 Link to clone Lab-two 
 https://github.com/jordan-huitema/Lab-Three.git
 
+Link to SDV503-Week-4
+https://github.com/jordan-huitema/SDV503-Week-4
+
+Link to clone SDV503-Week-4
+https://github.com/jordan-huitema/SDV503-Week-4.git
+
 --Journal Week 4--
 
 This week we touched on 3 main topics, If/Else Statements, Switch Statments and Ternary Operators.
