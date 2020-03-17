@@ -222,3 +222,25 @@ if (person.age >= 16) {                                       //this if statemen
 person.driver = person.age >=16 ? 'Yes' : 'No';               //this line does the same thing as the if statements but in shorthand
 //"person.age >=16" if the age var in the person array is greater than 15, "? 'Yes' : 'No'" if true set Yes if false set No
 
+//Nesting Example
+
+let mark = {score: 55, grade: null, desc: null};
+
+mark.grade = (mark.score >= 85 && mark.score <= 100) ? 'A+' : mark.grade;
+mark.grade = (mark.score >= 80 && mark.score <= 84) ? 'A' : mark.grade;
+mark.grade = (mark.score >= 75 && mark.score <= 79) ? 'A-' : mark.grade;
+mark.grade = (mark.score >= 70 && mark.score <= 74) ? 'B+' : mark.grade;
+mark.grade = (mark.score >= 65 && mark.score <= 69) ? 'B' : mark.grade;
+mark.grade = (mark.score >= 60 && mark.score <= 64) ? 'B-' : mark.grade;
+mark.grade = (mark.score >= 55 && mark.score <= 59) ? 'C+' : mark.grade;
+mark.grade = (mark.score >= 50 && mark.score <= 54) ? 'C' : mark.grade;
+mark.grade = (mark.score >= 40 && mark.score <= 49) ? 'D' : mark.grade;
+mark.grade = (mark.score >= 0 && mark.score <= 39) ? 'E' : mark.grade;
+
+mark.desc = mark.score >= 75 && mark.score <= 100 ? 'Pass with Distinction': mark.desc;
+mark.desc = mark.score >= 60 && mark.score <= 74 ? 'Pass with Merit': mark.desc;
+mark.desc = mark.score >= 50 && mark.score <= 59 ? 'Pass': mark.desc;
+mark.desc = mark.score >= 0 && mark.score <= 49 ? 'Fail': mark.desc;
+
+console.log("Result = "+ mark.grade);
+console.log(mark.desc);
