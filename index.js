@@ -224,9 +224,9 @@ person.driver = person.age >=16 ? 'Yes' : 'No';               //this line does t
 
 //Nesting Example
 
-let mark = {score: 55, grade: null, desc: null};
+let mark = {score: 77, grade: null, desc: null};                                     //setting mark array
 
-mark.grade = (mark.score >= 85 && mark.score <= 100) ? 'A+' : mark.grade;
+mark.grade = (mark.score >= 85 && mark.score <= 100) ? 'A+' : mark.grade;            //setting the grade var inside the mark array depending on what the value of mark.score is
 mark.grade = (mark.score >= 80 && mark.score <= 84) ? 'A' : mark.grade;
 mark.grade = (mark.score >= 75 && mark.score <= 79) ? 'A-' : mark.grade;
 mark.grade = (mark.score >= 70 && mark.score <= 74) ? 'B+' : mark.grade;
@@ -237,10 +237,13 @@ mark.grade = (mark.score >= 50 && mark.score <= 54) ? 'C' : mark.grade;
 mark.grade = (mark.score >= 40 && mark.score <= 49) ? 'D' : mark.grade;
 mark.grade = (mark.score >= 0 && mark.score <= 39) ? 'E' : mark.grade;
 
-mark.desc = mark.score >= 75 && mark.score <= 100 ? 'Pass with Distinction': mark.desc;
+mark.desc = mark.score >= 75 && mark.score <= 100 ? 'Pass with Distinction': mark.desc; //setting the description var inside the mark array depending on the value of mark.score
 mark.desc = mark.score >= 60 && mark.score <= 74 ? 'Pass with Merit': mark.desc;
 mark.desc = mark.score >= 50 && mark.score <= 59 ? 'Pass': mark.desc;
 mark.desc = mark.score >= 0 && mark.score <= 49 ? 'Fail': mark.desc;
 
-console.log("Result = "+ mark.grade);
-console.log(mark.desc);
+mark.grade = (mark.score < 0 || mark.score > 100) ? 'Please set score between 0-100' : mark.grade;  //sets grade var as error message if score value is not set correctly
+mark.desc = mark.score < 0 || mark.score > 100 ? 'Error': mark.desc;                                //sets desc var as error message if score value is not set correctly
+
+console.log("Result = "+ mark.grade);                                                  //prints results of mark.grade
+console.log(mark.desc);                                                                //and mark.desc (description)
