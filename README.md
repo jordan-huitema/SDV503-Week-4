@@ -102,8 +102,8 @@ case (var >= 85 && var <= 100) {
     break
 }
 
-Correct code                  || forgot you needed that
-                              \/
+Correct code
+
 case (var >= 85 && var <= 100): {
     console.log("words and such");
     break
